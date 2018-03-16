@@ -1,0 +1,9 @@
+phases:
+  install:
+    commands:
+      - npm install
+
+    artifacts:
+    files:
+        - node_modules
+        - src

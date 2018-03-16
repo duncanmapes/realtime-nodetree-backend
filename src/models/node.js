@@ -13,9 +13,6 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
   
   });
 
-
-
-
 const NodeFactory = sequelize.define('node', {
     title: {
       type: Sequelize.STRING,
@@ -48,11 +45,11 @@ const NodeFactory = sequelize.define('node', {
     }
   });
   
-  // force: true will drop the table if it already exists
+//   Uncomment the below to create your table and inject a sample row
 //   NodeFactory.sync({force: false}).then(() => {
 //     // Table created
 //     return NodeFactory.create({
-//         "title": "Nora Example",
+//         "title": "Example Node",
 //         "id": "5c056641-5903-4e0c-b98f-7938aaa0f5f6",
 //         "childrenCount": 5,
 //         "rangeHigh": 4534,
@@ -61,4 +58,4 @@ const NodeFactory = sequelize.define('node', {
 //     });
 //   });
 
-  module.exports = NodeFactory;
+module.exports = NodeFactory;
