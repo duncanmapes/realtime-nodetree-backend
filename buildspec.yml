@@ -1,9 +1,17 @@
+
 phases:
   install:
     commands:
+      - echo Installing Node Modules...
       - npm install
-
-    artifacts:
-    files:
-        - node_modules
-        - src
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Compiling the Node.js code
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - ./src
+    - ./node_modules
