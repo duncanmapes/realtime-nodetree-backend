@@ -8,6 +8,7 @@ phases:
   pre_build:
     commands:
       - "echo .... prebuild ...."
+      - "ls -i"
   build: 
     commands: 
       - "echo Build started on `date`"
