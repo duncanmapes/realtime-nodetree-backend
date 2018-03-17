@@ -17,6 +17,8 @@ phases:
     commands: 
       - "echo Build completed on `date`"
       - "tar -cvf app.tar ./src ./node_modules"
+      - "--- list all tar files ---"
+      - "tar -tf app.tar"
 artifacts: 
   files: 
     - 'app.tar'
