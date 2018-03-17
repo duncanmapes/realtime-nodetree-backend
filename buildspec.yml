@@ -1,17 +1,21 @@
---- 
-artifacts: 
-  files: 
-    - ./src
-    - ./node_modules
+version: 0.2
+
 phases: 
-  build: 
-    commands: 
-      - "echo Build started on `date`"
-      - "echo Compiling the Node.js code"
   install: 
     commands: 
       - "echo Installing Node Modules..."
       - "npm install"
+  pre_build:
+    commands:
+      - "echo .... prebuild ...."
+  build: 
+    commands: 
+      - "echo Build started on `date`"
+      - "echo Compiling the Node.js code"
   post_build: 
     commands: 
       - "echo Build completed on `date`"
+artifacts: 
+  files: 
+    - ./src
+    - ./node_modules
