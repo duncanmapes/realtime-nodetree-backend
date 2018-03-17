@@ -16,7 +16,7 @@ phases:
   post_build: 
     commands: 
       - "echo Build completed on `date`"
-      - "tar -cvfz app.tar.gz ./src ./node_modules"
+      - "tar -cvzf app.tar.gz ./src ./node_modules"
 artifacts: 
   files: 
     - 'app.tar.gz'
