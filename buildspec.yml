@@ -19,5 +19,4 @@ phases:
       - "ls -d */*/"
 artifacts: 
   files: 
-    - src/*
-    - node_modules/*
+    - '**/*'
