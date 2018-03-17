@@ -8,7 +8,7 @@ phases:
   pre_build:
     commands:
       - "echo .... prebuild ...."
-      - "ls -i"
+      - "ls -d */*/"
   build: 
     commands: 
       - "echo Build started on `date`"
@@ -16,6 +16,7 @@ phases:
   post_build: 
     commands: 
       - "echo Build completed on `date`"
+      - "ls -d */*/"
 artifacts: 
   files: 
     - src/*
